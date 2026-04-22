@@ -6,27 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <title>mr</title>
+    <title>ShadowStack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="font-[Poppins]">
 
-    <!--1st section start  -->
-    <section class="">
-        <!-- menu bar  -->
-        <nav class="w-full py-2 px-4  ">
-            <div class="flex gap-20 justify-end bg-stone-500 px-16 py-3 rounded-md text-white ">
-                <button type="button" class="font-bungee text-white text-4xl uppercase tracking-wider">
-                </button>
-                <button type="button"> Skills </button>
-                <button type="button"> Portfolio </button>
-                <button type="button"> Contact </button>
+    <!-- NAVBAR -->
+    <header class="fixed w-full top-0 z-50 backdrop-blur-lg bg-white/5 border-b border-white/10">
+        <nav class="max-w-8xl mx-auto px-15 py-4 flex w-full justify-between items-center text-white">
+
+            <!-- LOGO -->
+            <div class="">
+                <img src="logo.png" class="w-22 ">
+
             </div>
+            <div class="flex gap-48 items-center">
+                <!-- MENU -->
+                <ul class="hidden md:flex gap-20 text-gray-300 font-medium">
+                    <li><a href="#" class="hover:text-green-400 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-green-400 transition">Skills</a></li>
+                    <li><a href="#" class="hover:text-green-400 transition">Projects</a></li>
+                    <li><a href="#" class="hover:text-green-400 transition">Contact</a></li>
+                </ul>
+
+                <!-- CTA BUTTON -->
+                <button
+                    class="hidden md:block bg-green-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-green-300 transition">
+                    Hire Me
+                </button>
+            </div>
+
         </nav>
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+    <section>
+
+        <div>
+
+            <div
+                class="min-h-screen bg-gradient-to-br from-[#020617] via-[#020617] to-[#071a3a] text-white flex items-center pt-20">
+
+
+
+
+                <div class="max-w-9xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+                    <!-- LEFT TEXT -->
+                    <div class="space-y-4">
+
+                        <p class="text-sky-200 text-lg">👋 𝓐𝓼𝓼𝓪𝓵𝓪𝓶𝓾 𝓐𝓵𝓪𝓲𝓴𝓾𝓶, I'm</p>
+
+                        <h1 class="text-6xl font-extrabold leading-tight">
+                            𝙈𝙍 𝘾𝘼𝘾𝙏𝙐𝙎 <br>
+                            <span class="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                                Frontend Developer
+                            </span>
+                        </h1>
+
+                        <p class="text-gray-400 text-lg max-w-lg leading-relaxed">
+                            I craft beautiful, fast and responsive websites using
+                            modern technologies like React, Tailwind and JavaScript.
+                        </p>
+
+                        <!-- BUTTONS -->
+                        <div class="flex gap-4 pt-4">
+                            <button
+                                class="bg-gradient-to-r from-green-400 to-emerald-500 px-7 py-3 rounded-xl font-semibold text-black hover:scale-105 transition duration-300 shadow-lg shadow-green-500/20">
+                                Hire Me
+                            </button>
+
+                            <button
+                                class="border border-green-400 px-7 py-3 rounded-xl hover:bg-green-400 hover:text-black transition duration-300">
+                                View Projects
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="flex justify-center">
+
+                        <div class="relative group">
+
+                            <!-- GLOW -->
+                            <div
+                                class="absolute -inset-2 bg-gradient-to-r from-green-700 to-emerald-800 rounded-full blur-2xl opacity-20 group-hover:opacity-60 transition">
+                            </div>
+
+                            <!-- IMAGE -->
+                            <img src="image2.png"
+                                class="relative w-80 h-80 object-cover rounded-full border-4 border-rose-900 shadow-[0_0_810px_#ef4444] hover:animate-spin">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
 
     </section>
-    <!-- 2nd section start  -->
-
 
 </body>
 
