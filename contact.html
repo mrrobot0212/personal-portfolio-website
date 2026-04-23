@@ -27,49 +27,149 @@
             box-shadow: 0 0 60px rgba(0, 255, 170, .35);
         }
     </style>
-    <title>Document</title>
+    <title>Hire me </title>
 </head>
 
 <body>
     <!-- navbar -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
-        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-20">
 
-            <h1 class="text-2xl font-extrabold text-green-400">ShadowStack</h1>
+            <!-- logo -->
+            <div>
+                <img src="image/logo.png" class="w-20">
+            </div>
 
-            <ul class="hidden md:flex gap-10 text-white/80 font-semibold">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-20 text-white/80 font-semibold">
                 <li><a href="index.html" class="hover:text-green-400">Home</a></li>
                 <li><a href="about.html" class="hover:text-green-400">About</a></li>
                 <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
                 <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
                 <li><a href="services.html" class="hover:text-green-400">Services</a></li>
-                <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+
             </ul>
 
-            <a href="contact.html" class="bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
-                Hire Me
-            </a>
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-10">
+                <button id="themeToggle" class="text-xl">🌙</button>
+
+                <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
+
+
+            </div>
 
         </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="skills.html" class="block">Skills</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
     </nav>
-    <!-- navbar end -->
 
-    <section class="pt-40 pb-20 text-white">
-        <div class="max-w-xl mx-auto px-6 text-center">
+    <!-- navbar end  -->
 
-            <h1 class="text-5xl font-bold mb-10">Contact Me</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-            <form class="space-y-6">
-                <input class="w-full p-4 rounded bg-white/10" placeholder="Your Name">
-                <input class="w-full p-4 rounded bg-white/10" placeholder="Email">
-                <textarea class="w-full p-4 rounded bg-white/10" placeholder="Message"></textarea>
+    <section
+        class="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white flex items-center justify-center px-6">
 
-                <button class="bg-green-500 px-10 py-3 rounded-xl font-bold hover:scale-110 duration-300">
+        <div class="max-w-3xl w-full text-center">
+
+            <!-- Profile Image -->
+            <div class="flex justify-center mb-6">
+                <div
+                    class="w-32 h-32 rounded-full p-1 bg-gradient-to-r from-red-500 to-pink-500 shadow-lg hover:scale-105 transition">
+                    <img src="image/image3.png" class="w-full h-full rounded-full object-cover border-4 border-black" />
+                </div>
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-4xl font-bold mb-2">Contact Me</h2>
+            <p class="text-gray-400 mb-6">Let’s build something amazing 🚀</p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=100093029492010"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-blue-600/20 hover:border-blue-500 transition hover:scale-105 shadow-lg">
+                    <i class="fab fa-facebook-f text-blue-500"></i>
+                    <span class="text-sm">Facebook</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/mrrobot0212"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-gray-700/30 hover:border-gray-400 transition hover:scale-105 shadow-lg">
+                    <i class="fab fa-github"></i>
+                    <span class="text-sm">GitHub</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <!-- <a href="#"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-blue-500/20 hover:border-blue-400 transition hover:scale-105 shadow-lg">
+                    <i class="fab fa-linkedin-in text-blue-400"></i>
+                    <span class="text-sm">LinkedIn</span>
+                </a> -->
+
+                <!-- Instagram -->
+                <a href="#"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-pink-500/20 hover:border-pink-400 transition hover:scale-105 shadow-lg">
+                    <i class="fab fa-instagram text-pink-400"></i>
+                    <span class="text-sm">Instagram</span>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@shakawat572"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-black/40 hover:border-white transition hover:scale-105 shadow-lg">
+                    <i class="fab fa-tiktok"></i>
+                    <span class="text-sm">TikTok</span>
+                </a>
+
+                <!-- Fiverr -->
+                <!-- <a href="#"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-green-500/20 hover:border-green-400 transition hover:scale-105 shadow-lg">
+                    <span class="text-green-400 font-bold">$</span>
+                    <span class="text-sm">Fiverr</span>
+                </a> -->
+
+                <!-- Upwork
+                <a href="#"
+                    class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-400 transition hover:scale-105 shadow-lg">
+                    <i class="fas fa-briefcase text-emerald-400"></i>
+                    <span class="text-sm">Upwork</span>
+                </a> -->
+
+            </div>
+
+            <!-- Phone -->
+            <p class="text-gray-300 mb-8 text-lg">📞 +880 1328 339865</p>
+
+            <!-- Form -->
+            <form class="space-y-4">
+
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-500 outline-none transition" />
+
+                <input type="email" placeholder="Your Email"
+                    class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-500 outline-none transition" />
+
+                <textarea rows="5" placeholder="Your Message"
+                    class="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:border-red-500 focus:ring-2 focus:ring-red-500 outline-none transition"></textarea>
+
+                <button type="submit"
+                    class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 transition font-bold shadow-lg hover:shadow-red-500/50">
                     Send Message
                 </button>
+
             </form>
 
         </div>
+
     </section>
 
 
