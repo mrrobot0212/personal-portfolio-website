@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP Hero Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Poppins;
+            background: #020617
+        }
+
+        .glow {
+            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+            <h1 class="text-2xl font-extrabold text-green-400">ShadowStack</h1>
+
+            <ul class="hidden md:flex gap-10 text-white/80 font-semibold">
+                <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-green-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
+                <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
+                <li><a href="services.html" class="hover:text-green-400">Services</a></li>
+                <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+            </ul>
+
+            <a href="contact.html" class="bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
+                Hire Me
+            </a>
+
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <section class="pt-40 pb-20 text-white">
+        <div class="max-w-xl mx-auto px-6 text-center">
+
+            <h1 class="text-5xl font-bold mb-10">Contact Me</h1>
+
+            <form class="space-y-6">
+                <input class="w-full p-4 rounded bg-white/10" placeholder="Your Name">
+                <input class="w-full p-4 rounded bg-white/10" placeholder="Email">
+                <textarea class="w-full p-4 rounded bg-white/10" placeholder="Message"></textarea>
+
+                <button class="bg-green-500 px-10 py-3 rounded-xl font-bold hover:scale-110 duration-300">
+                    Send Message
+                </button>
+            </form>
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>

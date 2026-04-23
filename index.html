@@ -4,46 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP Hero Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Poppins;
+            background: #020617
+        }
+
+        .glow {
+            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        }
+
+        .light {
+            background: #f8fafc;
+            color: #020617;
+        }
+
+        .light nav {
+            background: white
+        }
+
+        .light .card {
+            background: #e2e8f0
+        }
+    </style>
     <title>ShadowStack</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="font-[Poppins]">
 
-    <!-- NAVBAR -->
-    <header class="fixed w-full top-0 z-50 backdrop-blur-lg bg-white/5 border-b border-white/10">
-        <nav class="max-w-8xl mx-auto px-15 py-4 flex w-full justify-between items-center text-white">
+<!-- navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-20">
 
-            <!-- LOGO -->
-            <div class="">
-                <img src="logo.png" class="w-22 ">
-
+            <!-- logo -->
+            <div>
+                <img src="image/logo.png" class="w-20">
             </div>
-            <div class="flex gap-48 items-center">
-                <!-- MENU -->
-                <ul class="hidden md:flex gap-20 text-gray-300 font-medium">
-                    <li><a href="#" class="hover:text-green-400 transition">Home</a></li>
-                    <li><a href="#" class="hover:text-green-400 transition">Skills</a></li>
-                    <li><a href="#" class="hover:text-green-400 transition">Projects</a></li>
-                    <li><a href="#" class="hover:text-green-400 transition">Contact</a></li>
-                </ul>
 
-                <!-- CTA BUTTON -->
-                <button
-                    class="hidden md:block bg-green-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-green-300 transition">
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-20 text-white/80 font-semibold">
+                <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-green-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
+                <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
+                <li><a href="services.html" class="hover:text-green-400">Services</a></li>
+
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-10">
+                <button id="themeToggle" class="text-xl">🌙</button>
+
+                <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
+
+                <a href="contact.html"
+                    class="hidden md:block bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
                     Hire Me
-                </button>
+                </a>
             </div>
 
-        </nav>
-    </header>
+        </div>
 
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="skills.html" class="block">Skills</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
+    </nav>
 
+    <!-- navbar end  -->
 
     <!-- HERO SECTION -->
     <section>
+        <div class="absolute w-72 h-72 bg-pink-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
 
         <div>
 
@@ -99,7 +151,7 @@
                             </div>
 
                             <!-- IMAGE -->
-                            <img src="image2.png"
+                            <img src="image/image2.png"
                                 class="relative w-80 h-80 object-cover rounded-full border-4 border-rose-900 shadow-[0_0_810px_#ef4444] hover:animate-spin">
 
                         </div>
@@ -113,6 +165,36 @@
 
     </section>
 
+    <!-- javaScript codes sss -->
+
+    <script>
+        gsap.to("#pageTransition", { y: "-100%", duration: 1 })
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", e => {
+                if (link.href.includes(".html")) {
+                    e.preventDefault()
+                    gsap.to("#pageTransition", {
+                        y: "0%", duration: .6,
+                        onComplete: () => { window.location = link.href }
+                    })
+                }
+            })
+        })
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script>
+        gsap.from("#heroText", { y: 80, opacity: 0, duration: 1.5 })
+        gsap.from("img", { scale: 0, opacity: 0, duration: 1.5, delay: .5 })
+    </script>
+    <script>
+        document.getElementById("menuBtn").onclick = () => {
+            document.getElementById("mobileMenu").classList.toggle("hidden")
+        }
+    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>

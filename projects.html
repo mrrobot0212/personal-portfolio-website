@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP Hero Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Poppins;
+            background: #020617
+        }
+
+        .glow {
+            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        }
+    </style>
+    <title>Projects</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-20">
+
+            <!-- logo -->
+            <div>
+                <img src="image/logo.png" class="w-20">
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-20 text-white/80 font-semibold">
+                <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-green-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
+                <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
+                <li><a href="services.html" class="hover:text-green-400">Services</a></li>
+
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-10">
+                <button id="themeToggle" class="text-xl">🌙</button>
+
+                <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
+
+                <a href="contact.html"
+                    class="hidden md:block bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
+                    Hire Me
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="skills.html" class="block">Skills</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+
+    <section class="pt-40 pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h1 class="text-5xl font-bold text-center mb-6">My Projects</h1>
+            <p class="text-center text-white/60 mb-16">
+                Some of my recent web development work
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <!-- PROJECT CARD 1 -->
+                <div data-aos="zoom-in"
+                    class="group bg-white/5 rounded-3xl overflow-hidden hover:-translate-y-4 duration-500">
+
+                    <div class="overflow-hidden">
+                        <img src="project1.png" class="group-hover:scale-110 duration-500">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-3">Portfolio Website</h2>
+                        <p class="text-white/60 mb-5">Modern personal portfolio with animations.</p>
+
+                        <div class="flex gap-4">
+                            <a href="https://your-live-link.com" target="_blank"
+                                class="bg-green-500 px-4 py-2 rounded-lg hover:scale-110 duration-300">
+                                Live Demo
+                            </a>
+
+                            <a href="#"
+                                class="border border-green-400 px-4 py-2 rounded-lg hover:bg-green-500 duration-300">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PROJECT CARD 2 -->
+                <div data-aos="zoom-in"
+                    class="group bg-white/5 rounded-3xl overflow-hidden hover:-translate-y-4 duration-500">
+
+                    <div class="overflow-hidden">
+                        <img src="project2.png" class="group-hover:scale-110 duration-500">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-3">Ecommerce UI</h2>
+                        <p class="text-white/60 mb-5">Online shop design using Tailwind.</p>
+
+                        <div class="flex gap-4">
+                            <a href="https://your-live-link.com" target="_blank"
+                                class="bg-green-500 px-4 py-2 rounded-lg hover:scale-110 duration-300">
+                                Live Demo
+                            </a>
+
+                            <a href="#"
+                                class="border border-green-400 px-4 py-2 rounded-lg hover:bg-green-500 duration-300">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PROJECT CARD 3 -->
+                <div data-aos="zoom-in"
+                    class="group bg-white/5 rounded-3xl overflow-hidden hover:-translate-y-4 duration-500">
+
+                    <div class="overflow-hidden">
+                        <img src="project3.png" class="group-hover:scale-110 duration-500">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-3">Agency Landing Page</h2>
+                        <p class="text-white/60 mb-5">Modern landing page for agency.</p>
+
+                        <div class="flex gap-4">
+                            <a href="https://your-live-link.com" target="_blank"
+                                class="bg-green-500 px-4 py-2 rounded-lg hover:scale-110 duration-300">
+                                Live Demo
+                            </a>
+
+                            <a href="#"
+                                class="border border-green-400 px-4 py-2 rounded-lg hover:bg-green-500 duration-300">
+                                Code
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>

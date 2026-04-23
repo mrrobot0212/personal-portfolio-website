@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP Hero Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Poppins;
+            background: #020617
+        }
+
+        .glow {
+            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        }
+    </style>
+    <title>Services</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-20">
+
+            <!-- logo -->
+            <div>
+                <img src="image/logo.png" class="w-20">
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-20 text-white/80 font-semibold">
+                <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-green-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
+                <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
+                <li><a href="services.html" class="hover:text-green-400">Services</a></li>
+
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-10">
+                <button id="themeToggle" class="text-xl">🌙</button>
+
+                <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
+
+                <a href="contact.html"
+                    class="hidden md:block bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
+                    Hire Me
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="skills.html" class="block">Skills</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+
+
+    <section class="pt-40 pb-20 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h1 class="text-5xl font-bold text-center mb-16">Services</h1>
+
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <div class="bg-white/5 p-8 rounded-2xl text-center hover:-translate-y-4 duration-300">
+                    <h2 class="text-2xl font-bold mb-4">Web Design</h2>
+                    <p>Modern UI/UX design</p>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl text-center hover:-translate-y-4 duration-300">
+                    <h2 class="text-2xl font-bold mb-4">Frontend Dev</h2>
+                    <p>React & Tailwind</p>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl text-center hover:-translate-y-4 duration-300">
+                    <h2 class="text-2xl font-bold mb-4">Speed Optimize</h2>
+                    <p>Fast loading websites</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP Hero Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Poppins;
+            background: #020617
+        }
+
+        .glow {
+            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        }
+    </style>
+    <title>Skills</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-3 lg:px-20">
+
+            <!-- logo -->
+            <div>
+                <img src="image/logo.png" class="w-20">
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-20 text-white/80 font-semibold">
+                <li><a href="index.html" class="hover:text-green-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-green-400">About</a></li>
+                <li><a href="skills.html" class="hover:text-green-400">Skills</a></li>
+                <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
+                <li><a href="services.html" class="hover:text-green-400">Services</a></li>
+
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-10">
+                <button id="themeToggle" class="text-xl">🌙</button>
+
+                <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
+
+                <a href="contact.html"
+                    class="hidden md:block bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
+                    Hire Me
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+            <a href="index.html" class="block">Home</a>
+            <a href="about.html" class="block">About</a>
+            <a href="skills.html" class="block">Skills</a>
+            <a href="projects.html" class="block">Projects</a>
+            <a href="services.html" class="block">Services</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+    <section class="pt-40 pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h1 class="text-5xl font-bold text-center mb-20">My Skills & Creativity</h1>
+
+            <div class="grid md:grid-cols-2 gap-20">
+
+                <!-- LEFT SIDE — CODING -->
+                <div>
+                    <h2 class="text-3xl font-bold text-green-400 mb-8">💻 Coding Skills</h2>
+
+                    <div class="space-y-6">
+
+                        <div>
+                            <p class="mb-2">HTML</p>
+                            <div class="bg-white/10 h-3 rounded">
+                                <div class="bg-green-400 h-3 rounded w-[95%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="mb-2">CSS / Tailwind</p>
+                            <div class="bg-white/10 h-3 rounded">
+                                <div class="bg-green-400 h-3 rounded w-[90%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="mb-2">JavaScript</p>
+                            <div class="bg-white/10 h-3 rounded">
+                                <div class="bg-green-400 h-3 rounded w-[85%]"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="mb-2">Responsive Design</p>
+                            <div class="bg-white/10 h-3 rounded">
+                                <div class="bg-green-400 h-3 rounded w-[92%]"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="space-y-14">
+
+                    <!-- LANGUAGES -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-green-400 mb-6">🌍 Languages</h2>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-white/10 px-6 py-2 rounded-full">English</span>
+                            <span class="bg-white/10 px-6 py-2 rounded-full">Hindi</span>
+                            <span class="bg-white/10 px-6 py-2 rounded-full">Bangla</span>
+                        </div>
+                    </div>
+
+                    <!-- DESIGN SKILLS -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-green-400 mb-6">🎨 Design Skills</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/5 p-4 rounded-xl text-center">Logo Design</div>
+                            <div class="bg-white/5 p-4 rounded-xl text-center">Business Card</div>
+                            <div class="bg-white/5 p-4 rounded-xl text-center">Poster Design</div>
+                            <div class="bg-white/5 p-4 rounded-xl text-center">Social Media Post</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- degine -->
+    <section class="pb-32 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h1 class="text-4xl font-bold text-center mb-16">My Design,s</h1>
+
+            <div class="grid md:grid-cols-3 gap-10">
+
+                <img src="image/image.png" class="designImg rounded-2xl cursor-pointer hover:scale-105 duration-300">
+                <img src="image/businesscard.png" class="designImg rounded-2xl cursor-pointer hover:scale-105 duration-300">
+                <img src="image/poster.png" class="designImg rounded-2xl cursor-pointer hover:scale-105 duration-300">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="main.js"></script>
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+        <img id="lightboxImg" class="max-w-[90%] max-h-[90%] rounded-2xl">
+    </div>
+</body>
+
+</html>
