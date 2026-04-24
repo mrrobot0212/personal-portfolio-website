@@ -19,33 +19,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <style>
-        body {
-            font-family: Poppins;
-            background: #020617
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
         }
 
-        .glow {
-            box-shadow: 0 0 60px rgba(0, 255, 170, .35);
+        .animate-fadeUp {
+            animation: fadeUp .8s ease forwards
         }
 
-        .light {
-            background: #f8fafc;
-            color: #020617;
+        .delay-100 {
+            animation-delay: .2s
         }
 
-        .light nav {
-            background: white
+        .delay-200 {
+            animation-delay: .4s
         }
 
-        .light .card {
-            background: #e2e8f0
+        .delay-300 {
+            animation-delay: .6s
         }
     </style>
+
     <title>ShadowStack</title>
 
 </head>
 
-<body class="font-[Poppins]">
+
+<body class="font-[Poppins] body bg-slate-950 text-white scroll-smooth">
+
 
     <!-- navbar -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
@@ -90,109 +99,95 @@
 
     <!-- navbar end  -->
 
-    <!-- HERO SECTION -->
-    <section>
-        <div class="absolute w-72 h-72 bg-pink-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
 
-        <div>
+    <!-- hero section -->
 
-            <div
-                class="min-h-screen bg-gradient-to-br from-[#020617] via-[#020617] to-[#071a3a] text-white flex items-center pt-20">
+    <section id="hero" class="relative min-h-screen bg-slate-950 overflow-hidden flex items-center">
 
+        <!-- grid background -->
+        <div
+            class="absolute inset-0 opacity-[0.07] bg-[linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] bg-[size:60px_60px]">
+        </div>
 
+        <!-- spotlight -->
+        <div id="spotlight"
+            class="pointer-events-none absolute w-[600px] h-[600px] rounded-full blur-3xl bg-[radial-gradient(circle,rgba(34,197,94,0.18),transparent_60%)]">
+        </div>
 
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-                <div class="max-w-9xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <!-- LEFT GLASS CARD -->
+            <div class="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-3xl p-10 shadow-2xl space-y-5">
 
-                    <!-- LEFT TEXT -->
-                    <div class="space-y-4">
+                <p class="text-emerald-400 animate-fadeUp">👋 Assalamu Alaikum, I'm</p>
 
-                        <p class="text-sky-200 text-lg">👋 𝓐𝓼𝓼𝓪𝓵𝓪𝓶𝓾 𝓐𝓵𝓪𝓲𝓴𝓾𝓶, I'm</p>
+                <h1 class="text-6xl font-extrabold text-white animate-fadeUp delay-100">
+                    MR CACTUS
+                </h1>
 
-                        <h1 class="text-6xl font-extrabold leading-tight">
-                            𝙈𝙍 𝘾𝘼𝘾𝙏𝙐𝙎 <br>
-                            <span class="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-                                Frontend Developer
-                            </span>
-                        </h1>
+                <h2
+                    class="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-sky-400 text-transparent bg-clip-text animate-fadeUp delay-200">
+                    Frontend Developer
+                </h2>
 
-                        <p class="text-gray-400 text-lg max-w-lg leading-relaxed">
-                            I craft beautiful, fast and responsive websites using
-                            modern technologies like React, Tailwind and JavaScript.
-                        </p>
+                <p class="text-gray-400 max-w-md animate-fadeUp delay-300">
+                    I craft beautiful, fast and modern websites using React, Tailwind & JavaScript.
+                </p>
 
-                        <!-- BUTTONS -->
-                        <div class="flex gap-4 pt-4">
-                            <button>
-                                <a href="contact.html"
-                                    class="py-3 px-6 bg-green-400 rounded-xl text-black font-bold italic text-lg">Hire
-                                    Me</a>
-                            </button>
+                <div class="flex gap-6 pt-4">
+                    
+                    <a href="contact.html"class="block magnetic px-7 py-3 bg-emerald-500 rounded-xl
+                        font-semibold shadow-lg shadow-emerald-500/30 hover:scale-110 transition">Hire Me</a>
 
-                            <button>
-                                <a href="projects.html"
-                                    class="border border-green-400 px-7 py-3 rounded-xl hover:bg-green-400 hover:text-black transition duration-300">View
-                                    Projects</a>
-                                
-                            </button>
-                        </div>
+                
+                    
 
-                    </div>
-
-
-                    <!-- RIGHT IMAGE -->
-                    <div class="flex justify-center">
-
-                        <div class="relative group">
-
-                            <!-- GLOW -->
-                            <div
-                                class="absolute -inset-2 bg-gradient-to-r from-green-700 to-emerald-800 rounded-full blur-2xl opacity-20 group-hover:opacity-60 transition">
-                            </div>
-
-                            <!-- IMAGE -->
-                            <img src="image/image2.png"
-                                class="relative w-80 h-80 object-cover rounded-full border-4 border-rose-900 shadow-[0_0_810px_#ef4444] hover:animate-spin">
-
-                        </div>
-
-                    </div>
-
+                <a href="projects.html"class="magnetic px-7 py-3 border border-sky-400 text-sky-400 rounded-xl hover:bg-sky-400/10 hover:scale-110 transition">
+                        Projects
+                -></a>    
+                  
                 </div>
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="flex justify-center perspective-[1000px]">
+                <img id="tilt" src="image/image2.png"
+                    class="w-80 h-80 rounded-full object-cover border border-white/10 shadow-2xl">
             </div>
 
         </div>
-
     </section>
 
     <!-- javaScript codes sss -->
-
     <script>
-        gsap.to("#pageTransition", { y: "-100%", duration: 1 })
 
-        document.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", e => {
-                if (link.href.includes(".html")) {
-                    e.preventDefault()
-                    gsap.to("#pageTransition", {
-                        y: "0%", duration: .6,
-                        onComplete: () => { window.location = link.href }
-                    })
-                }
-            })
-        })
-    </script>
+        /* spotlight mouse follow */
+        const spotlight = document.getElementById("spotlight");
+        document.addEventListener("mousemove", e => {
+            spotlight.style.left = e.pageX - 300 + "px";
+            spotlight.style.top = e.pageY - 300 + "px";
+        });
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script>
-        gsap.from("#heroText", { y: 80, opacity: 0, duration: 1.5 })
-        gsap.from("img", { scale: 0, opacity: 0, duration: 1.5, delay: .5 })
-    </script>
-    <script>
-        document.getElementById("menuBtn").onclick = () => {
-            document.getElementById("mobileMenu").classList.toggle("hidden")
-        }
+        /* 3D tilt image */
+        const tilt = document.getElementById("tilt");
+        document.addEventListener("mousemove", e => {
+            let x = (window.innerWidth / 2 - e.pageX) / 25;
+            let y = (window.innerHeight / 2 - e.pageY) / 25;
+            tilt.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+
+        /* magnetic buttons */
+        document.querySelectorAll(".magnetic").forEach(btn => {
+            btn.addEventListener("mousemove", e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.2}px,${y * 0.2}px)`;
+            });
+            btn.addEventListener("mouseleave", () => btn.style.transform = "translate(0,0)");
+        });
+
     </script>
     <script src="main.js"></script>
 </body>
