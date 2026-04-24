@@ -68,3 +68,42 @@ window.addEventListener("scroll", () => {
     header.classList.remove("bg-black/70", "backdrop-blur-md");
   }
 });
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", function () {
+  mobileMenu.classList.toggle("hidden");
+});
+
+/* spotlight mouse follow */
+const spotlight = document.getElementById("spotlight");
+document.addEventListener("mousemove", e => {
+  spotlight.style.left = e.pageX - 300 + "px";
+  spotlight.style.top = e.pageY - 300 + "px";
+});
+
+/* 3D tilt image */
+const tilt = document.getElementById("tilt");
+document.addEventListener("mousemove", e => {
+  let x = (window.innerWidth / 2 - e.pageX) / 25;
+  let y = (window.innerHeight / 2 - e.pageY) / 25;
+  tilt.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+/* magnetic buttons */
+document.querySelectorAll(".magnetic").forEach(btn => {
+  btn.addEventListener("mousemove", e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px,${y * 0.2}px)`;
+  });
+  btn.addEventListener("mouseleave", () => btn.style.transform = "translate(0,0)");
+});
+

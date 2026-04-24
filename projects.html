@@ -34,7 +34,7 @@
 
     <!-- navbar -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
-        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-20">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-4 lg:px-20">
 
             <!-- logo -->
             <div>
@@ -54,25 +54,24 @@
             <!-- Right Buttons -->
             <div class="flex items-center gap-10">
                 <button id="themeToggle" class="text-xl">🌙</button>
-
                 <button id="menuBtn" class="md:hidden text-3xl text-white">☰</button>
 
-                <a href="contact.html"
-                    class="hidden md:block bg-green-500 px-5 py-2 rounded-full font-bold hover:scale-110 duration-300">
-                    Hire Me
-                </a>
+
             </div>
 
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center p-8 space-y-6">
+        <div id="mobileMenu"
+            class="hidden fixed top-0 left-0 w-full h-screen bg-black/95 text-center pt-32 space-y-8 text-xl z-50">
+
             <a href="index.html" class="block">Home</a>
             <a href="about.html" class="block">About</a>
             <a href="skills.html" class="block">Skills</a>
             <a href="projects.html" class="block">Projects</a>
             <a href="services.html" class="block">Services</a>
             <a href="contact.html" class="block">Contact</a>
+
         </div>
     </nav>
 
@@ -182,6 +181,7 @@
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script src="main.js"></script>
 </body>
 
 </html>
