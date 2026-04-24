@@ -32,9 +32,10 @@
 
 <body>
 
+
     <!-- navbar -->
     <nav class="fixed w-full z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
-        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-3 lg:px-20">
+        <div class="max-w-9xl mx-auto flex justify-between items-center p-4 px-4 lg:px-20">
 
             <!-- logo -->
             <div>
@@ -74,6 +75,9 @@
 
         </div>
     </nav>
+
+    <!-- navbar end  -->
+
 
     <!-- navbar end  -->
 
@@ -168,7 +172,53 @@
         </div>
     </section>
 
+    <!-- javaScript codes sss -->
+    <script>
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+            });
+        });
+    </script>
 
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <script>
+
+        /* spotlight mouse follow */
+        const spotlight = document.getElementById("spotlight");
+        document.addEventListener("mousemove", e => {
+            spotlight.style.left = e.pageX - 300 + "px";
+            spotlight.style.top = e.pageY - 300 + "px";
+        });
+
+        /* 3D tilt image */
+        const tilt = document.getElementById("tilt");
+        document.addEventListener("mousemove", e => {
+            let x = (window.innerWidth / 2 - e.pageX) / 25;
+            let y = (window.innerHeight / 2 - e.pageY) / 25;
+            tilt.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+
+        /* magnetic buttons */
+        document.querySelectorAll(".magnetic").forEach(btn => {
+            btn.addEventListener("mousemove", e => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${x * 0.2}px,${y * 0.2}px)`;
+            });
+            btn.addEventListener("mouseleave", () => btn.style.transform = "translate(0,0)");
+        });
+
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>AOS.init();</script>
